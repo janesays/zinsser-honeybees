@@ -1,205 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Zinsser Honeybees • Hastings-on-Hudson, NY</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Community pollinator hives at Zinsser Community Garden in Hastings-on-Hudson, NY. Launching 2026 with support from Bloomberg Philanthropies Youth Climate Action Fund." />
-  <meta name="theme-color" content="#f7b81f" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Zinsser Honeybees" />
-  <meta property="og:description" content="Community pollinator hives at Zinsser Community Garden — launching 2026!" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://janesays.github.io/zinsser-honeybees/" />
-
-  <style>
-    :root{
-      --bg:#fffdf6;
-      --ink:#2f2a1f;
-      --muted:#6d6250;
-      --honey:#f7b81f;
-      --amber:#ffda59;
-      --leaf:#2e7d32;
-      --card:#ffffff;
-      --ring: rgba(47,42,31,.15);
-      --radius: 16px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--ink);
-      background:
-        radial-gradient(1200px 600px at 100% -200px, #fff1c6 0%, transparent 60%),
-        linear-gradient(180deg,#fffdf6, #fffaf0 60%, #fffdf6);
-    }
-
-    /* Header */
-    .site-header{
-      position:sticky; top:0; z-index:10;
-      background:rgba(255,255,255,.7); backdrop-filter:saturate(140%) blur(8px);
-      border-bottom:1px solid #f2e7c8;
-    }
-    .wrap{max-width:1000px; margin:0 auto; padding:0 20px}
-    .bar{
-      display:flex; align-items:center; gap:14px; padding:14px 0;
-    }
-    .logo{
-      display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit;
-    }
-    .logo svg{width:34px; height:34px}
-    .logo strong{font-size:1.05rem; letter-spacing:.2px}
-
-    /* Hero */
-    .hero{
-      padding:64px 20px 28px;
-      text-align:center;
-    }
-    .badge{
-      display:inline-block; font-weight:600; letter-spacing:.3px;
-      background:#fff4c6; color:#5c4700; border:1px solid #ffe89a;
-      padding:6px 10px; border-radius:999px;
-    }
-    h1{
-      font-size:clamp(2rem, 3.6vw, 3rem);
-      line-height:1.15; margin:14px 0 10px;
-      letter-spacing:.2px;
-    }
-    .lede{
-      max-width:720px; margin:0 auto 22px; color:var(--muted);
-      font-size:1.05rem;
-    }
-    .cta{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:12px 18px; border-radius:999px; font-weight:600;
-      background:var(--honey); border:1px solid #e6a900; color:#3a2b00;
-      text-decoration:none; box-shadow:0 6px 18px rgba(247,184,31,.25);
-      transition:transform .08s ease, box-shadow .2s ease;
-    }
-    .cta:hover{ transform:translateY(-1px); box-shadow:0 10px 24px rgba(247,184,31,.32) }
-
-    /* Content cards */
-    .grid{
-      display:grid; gap:18px; grid-template-columns:1fr;
-      max-width:1000px; margin:28px auto; padding:0 20px 24px;
-    }
-    @media (min-width:720px){
-      .grid{ grid-template-columns: 1.2fr .8fr; }
-    }
-    .card{
-      background:var(--card); border:1px solid #efe6d0; border-radius:var(--radius);
-      padding:22px; box-shadow:0 2px 12px var(--ring);
-    }
-    .card h2{ margin:0 0 8px; font-size:1.25rem }
-    .card p{ margin:.4em 0 }
-    .list{padding-left:1.1em}
-    .list li{margin:.25em 0}
-    .note{font-size:.95rem; color:var(--muted)}
-
-    /* Footer */
-    footer{
-      border-top:1px solid #efe6d0; margin-top:28px; padding:18px 20px 40px; text-align:center; color:var(--muted);
-    }
-
-    /* Little bee animation */
-    .bee{
-      position:relative; display:inline-flex; align-items:center; gap:8px;
-      margin-left:6px;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float{
-      0%,100%{ transform:translateY(0) }
-      50%{ transform:translateY(-3px) }
-    }
-
-    /* Respect dark preference a bit */
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#11100c; --ink:#f7f3e7; --muted:#c3b79f; --card:#1a1711; --ring: rgba(0,0,0,.4);
-      }
-      body{ background:linear-gradient(180deg,#14130f, #0f0e0b) }
-      .site-header{ background:rgba(20,19,15,.6); border-bottom:1px solid #2a251b }
-      .card{ border-color:#2a251b }
-      footer{ border-color:#2a251b }
-      .badge{ background:#3a2f12; color:#ffea9b; border-color:#4b3c16 }
-      .cta{ color:#241a00 }
-    }
-
-    /* Reduce motion if requested */
-    @media (prefers-reduced-motion: reduce){
-      .bee{ animation: none }
-      .cta{ transition: none }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Zinsser Honeybees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fffbee;
+            color: #3a3a3a;
+            text-align: center;
+            padding: 2em;
+        }
+        header {
+            background: #ffe066;
+            padding: 1em 0;
+        }
+        header img {
+            height: 80px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0.2em;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 1em auto;
+        }
+        footer {
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="bar">
-        <a class="logo" href="/">
-          <!-- Inline bee logo (SVG) so there’s no external dependency) -->
-          <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stop-color="#ffda59"/>
-                <stop offset="1" stop-color="#f7b81f"/>
-              </linearGradient>
-            </defs>
-            <path fill="#222" d="M10 22c0-6 5-11 11-11s11 5 11 11-5 11-11 11S10 28 10 22Z"/>
-            <ellipse cx="21" cy="22" rx="10" ry="9" fill="url(#g)" />
-            <rect x="12" y="19" width="18" height="2.5" rx="1.3" fill="#2f2a1f"/>
-            <rect x="12" y="23" width="18" height="2.5" rx="1.3" fill="#2f2a1f"/>
-            <circle cx="18" cy="19" r="1.7" fill="#2f2a1f"/>
-            <path d="M30 16c4-2 8-2 10 1-3 2-7 3-10 1Z" fill="#ffe89a"/>
-            <path d="M30 28c4 2 8 2 10-1-3-2-7-3-10-1Z" fill="#ffe89a"/>
-          </svg>
-          <strong>Zinsser Honeybees</strong>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <span class="badge">Community Pollinators • Hastings-on-Hudson, NY</span>
-      <h1>Buzzing into <span style="white-space:nowrap">2026<span class="bee">🐝</span></span></h1>
-      <p class="lede">
-        We’re building vibrant hives at the Zinsser Community Garden, with support from the
-        <a href="https://www.hohny.gov/674/Youth-Climate-Action-Fund---HoH-YCAF">Bloomberg Philanthropies Youth Climate Action Fund</a>.
-        Follow along as we prepare the apiary and this site.
-      </p>
-    </section>
-
-    <section class="grid">
-      <article class="card">
-        <h2>What’s coming</h2>
-        <p>
-          A small, education-first apiary with native plantings to support pollinators. We’ll share
-          photos, hive notes, and seasonal tips for helping bees thrive in our neighborhood.
-        </p>
-        <ul class="list">
-          <li>Site prep &amp; native plant palette</li>
-          <li>Hive assembly &amp; siting plan</li>
-          <li>Workdays &amp; hands-on learning</li>
-          <li>Safety &amp; stewardship guidelines</li>
-        </ul>
-        <p class="note">Want to help? Email <a href="mailto:info@zinsserhoneybees.org">info@zinsserhoneybees.org</a>.</p>
-      </article>
-
-      <aside class="card">
-        <h2>Project timeline</h2>
-        <p><strong>Fall 2025:</strong> Site planning &amp; permits</p>
-        <p><strong>Winter 2025–26:</strong> Equipment &amp; training</p>
-        <p><strong>Spring 2026:</strong> Install hives &amp; plantings</p>
-        <p><strong>Summer 2026:</strong> First season observations</p>
-      </aside>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Zinsser Honeybees • Powered by pollinators 🐝
-  </footer>
+    <header>
+        <img src="honeybee.svg" alt="Zinsser Honeybees Logo">
+    </header>
+    <main>
+        <h1>Zinsser Honeybees, Buzzing in 2026!</h1>
+        <p>We're creating a vibrant apiary buzzing with life—thanks to the honeybees and Bloomberg Philanthropies Youth Climate Action Fund. We are placing pollinator hives where they belong: right in the heart of the Zinsser Community Garden in Hastings-on-Hudson, New York.</p>
+        <p>Check back soon as we grow this site along with our hives.</p>
+    </main>
+    <footer>
+        © 2025 Zinsser Honeybees | Powered by pollinators 🐝
+    </footer>
 </body>
 </html>
